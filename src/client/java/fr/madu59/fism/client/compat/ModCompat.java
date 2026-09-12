@@ -6,6 +6,7 @@ public class ModCompat {
     public static boolean isShadowPass(){
         if(isIrisLoaded()) return IrisCompat.isShadowPass();
         if(BerylCompat.isShadowPass()) return true;
+        if(OptifineCompat.isShadowPass()) return true;
         else return false;
     }
 
