@@ -7,7 +7,6 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 import net.minecraft.client.model.Model;
-import net.minecraft.client.renderer.OrderedSubmitNodeCollector;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BannerRenderer;
 import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
