@@ -17,5 +17,5 @@ import net.minecraft.world.item.DyeColor;
 @Mixin(BannerRenderer.class)
 public interface BannerRendererAccessor {
     @Invoker("submitPatternLayer")
-    static <S> void fism$submitPatternLayerInvoke(final SpriteGetter sprites, final PoseStack poseStack, final OrderedSubmitNodeCollector submitNodeCollector, final int lightCoords, final int overlayCoords, final Model<S> model, final S state, final SpriteId sprite, final DyeColor color, final ModelFeatureRenderer.@Nullable CrumblingOverlay breakProgress){};
+    static <S> void fastershadowmapper$submitPatternLayerInvoke(final SpriteGetter sprites, final PoseStack poseStack, final OrderedSubmitNodeCollector submitNodeCollector, final int lightCoords, final int overlayCoords, final Model<S> model, final S state, final SpriteId sprite, final DyeColor color, final ModelFeatureRenderer.@Nullable CrumblingOverlay breakProgress){};
 }

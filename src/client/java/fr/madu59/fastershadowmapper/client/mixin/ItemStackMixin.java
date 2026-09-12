@@ -11,7 +11,7 @@ import net.minecraft.world.item.ItemStack;
 @Mixin(ItemStack.class)
 public abstract class ItemStackMixin {
     @Inject(method = "hasFoil", at = @At("HEAD"), cancellable = true)
-    private void fism$cancelGlintRendering(CallbackInfoReturnable<Boolean> cir){
+    private void fastershadowmapper$cancelGlintRendering(CallbackInfoReturnable<Boolean> cir){
         if(ModCompat.isShadowPass()) cir.setReturnValue(false);
     }
 }
