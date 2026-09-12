@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "fism",
+	"id": "fastershadowmapper",
 	"version": "${version}",
-	"name": "Faster Iris Shadow Mapper",
-	"description": "Makes Iris shadow mapping process faster",
+	"name": "Faster Shadow Mapper",
+	"description": "Slightly improves the speed of the shadow mapper in popular shader mods including Iris, Optifine, Oculus and Beryl.",
 	"authors": [
 		"maDU59_"
 	],
@@ -12,13 +12,13 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/fism/icon.png",
+	"icon": "assets/fastershadowmapper/icon.png",
 	"environment": "*",
 	"entrypoints": {
 	},
 	"mixins": [
 		{
-			"config": "fism.client.mixins.json",
+			"config": "fastershadowmapper.client.mixins.json",
 			"environment": "client"
 		}
 	],

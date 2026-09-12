@@ -1,4 +1,4 @@
-package fr.madu59.fism.client.compat;
+package fr.madu59.fastershadowmapper.client.compat;
 
 import net.irisshaders.iris.api.v0.IrisApi;
 

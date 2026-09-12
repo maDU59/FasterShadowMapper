@@ -1,4 +1,4 @@
-package fr.madu59.fism.client.compat;
+package fr.madu59.fastershadowmapper.client.compat;
 
 public class ModCompat {
     private static boolean isIrisLoaded = classExist("net.irisshaders.iris.api.v0.IrisApi");

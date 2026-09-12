@@ -1,4 +1,4 @@
-package fr.madu59.fism.client.compat;
+package fr.madu59.fastershadowmapper.client.compat;
 
 public class BerylCompat {
     private static boolean isShadowPass = false;
