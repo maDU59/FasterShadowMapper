@@ -1,4 +1,4 @@
-package fr.madu59.fism.client.mixin;
+package fr.madu59.fastershadowmapper.client.mixin;
 
 import org.jspecify.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -17,5 +17,5 @@ import net.minecraft.world.item.DyeColor;
 @Mixin(BannerRenderer.class)
 public interface BannerRendererAccessor {
     @Invoker("submitPatternLayer")
-    static <S> void fism$submitPatternLayerInvoke(MaterialSet materialSet, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, int i, int j, Model<S> model, S object, Material material, DyeColor dyeColor, ModelFeatureRenderer.@Nullable CrumblingOverlay crumblingOverlay){};
+    static <S> void fastershadowmapper$submitPatternLayerInvoke(MaterialSet materialSet, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, int i, int j, Model<S> model, S object, Material material, DyeColor dyeColor, ModelFeatureRenderer.@Nullable CrumblingOverlay crumblingOverlay){};
 }
