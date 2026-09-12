@@ -11,7 +11,7 @@ import net.minecraft.client.renderer.MapRenderer;
 @Mixin(MapRenderer.class)
 public abstract class MapRendererMixin {
     @Inject(method = "render", at = @At("HEAD"), cancellable = true)
-    public <S> void fism$cancelMapRendering(CallbackInfo ci) {
+    public <S> void fastershadowmapper$cancelMapRendering(CallbackInfo ci) {
         if(ModCompat.isShadowPass()) {
             ci.cancel();
         }

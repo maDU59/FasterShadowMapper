@@ -19,7 +19,7 @@ public class ShadowMapMixin {
     @WrapOperation(
         method = "renderShadowMap(Lnet/minecraft/client/Camera;Lcom/mojang/blaze3d/vertex/PoseStack;Lorg/joml/Matrix4f;Lnet/minecraft/client/DeltaTracker;)V"
     )
-    private void mpe$wrapRenderShadowMap(
+    private void fastershadowmapper$wrapRenderShadowMap(
             Camera camera, 
             PoseStack poseStack, 
             Matrix4f projection, 

@@ -11,7 +11,7 @@ import net.minecraft.client.renderer.blockentity.AbstractSignRenderer;
 @Mixin(AbstractSignRenderer.class)
 public abstract class AbstractSignRendererMixin {
     @Inject(method = "submitSignText", at = @At("HEAD"), cancellable = true)
-    public void fism$cancelSignTextRendering(CallbackInfo ci){
+    public void fastershadowmapper$cancelSignTextRendering(CallbackInfo ci){
         if(ModCompat.isShadowPass()) ci.cancel();
     }
 }
