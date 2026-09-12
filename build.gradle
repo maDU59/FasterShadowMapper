@@ -38,7 +38,7 @@ dependencies {
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
 	implementation("net.caffeinemc:sodium-fabric:0.8.12+mc26.1.2")
-	implementation("maven.modrinth:iris:26.1-fabric")
+	implementation("maven.modrinth:iris:1.10.9+26.1-fabric")
 
 	compileOnly("maven.modrinth:beryl:Wgi6wkQ4")
 	compileOnly("maven.modrinth:vulkanmod:0.6.8+26.1.2")
