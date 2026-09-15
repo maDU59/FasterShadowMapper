@@ -21,9 +21,9 @@ import net.minecraft.world.level.block.entity.BannerPatternLayers;
 @Mixin(BannerRenderer.class)
 public abstract class BannerRendererMixin {
     @Inject(method = "submitPatterns", at = @At("HEAD"), cancellable = true)
-    private static <S> void fastershadowmapper$cancelSubmitPatterns(final SpriteGetter sprites, final PoseStack poseStack, final SubmitNodeCollector submitNodeCollector, final int lightCoords, final int overlayCoords, final Model<S> model, final S state, final boolean banner, final DyeColor baseColor, final BannerPatternLayers patterns, final ModelFeatureRenderer.@Nullable CrumblingOverlay breakProgress, CallbackInfo ci) {
+    private static <S> void fastershadowmapper$cancelSubmitPatterns(final SpriteGetter sprites, final PoseStack poseStack, final SubmitNodeCollector submitNodeCollector, final int lightCoords, final int overlayCoords, final Model<S> model, final S state, final boolean banner, final DyeColor baseColor, final BannerPatternLayers patterns, CallbackInfo ci) {
         if(ModCompat.isShadowPass()) {
-            BannerRendererAccessor.fastershadowmapper$submitPatternLayerInvoke(sprites, poseStack, submitNodeCollector, lightCoords, overlayCoords, model, state, banner ? Sheets.BANNER_PATTERN_BASE : Sheets.SHIELD_PATTERN_BASE, baseColor, breakProgress);
+            BannerRendererAccessor.fastershadowmapper$submitPatternLayerInvoke(sprites, poseStack, submitNodeCollector, lightCoords, overlayCoords, model, state, banner ? Sheets.BANNER_PATTERN_BASE : Sheets.SHIELD_PATTERN_BASE, baseColor);
             ci.cancel();
         }
     }
