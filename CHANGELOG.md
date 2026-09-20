@@ -1,2 +1,2 @@
 # What's new:
-- Initial release
+- Improved Optifine compatibility for improved performances

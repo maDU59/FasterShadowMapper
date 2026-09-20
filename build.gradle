@@ -45,6 +45,8 @@ dependencies {
 	
 	modCompileOnly("maven.modrinth:beryl:UJ7cWso7")
 	modCompileOnly("maven.modrinth:vulkanmod:0.6.8+1.21.11")
+
+	modImplementation("maven.modrinth:spark:1.10.170-fabric")
 }
 
 processResources {
