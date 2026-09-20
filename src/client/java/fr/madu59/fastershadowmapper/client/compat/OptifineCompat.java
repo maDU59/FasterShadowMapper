@@ -8,6 +8,7 @@ public class OptifineCompat {
             Class<?> shadersClass = Class.forName("net.optifine.shaders.Shaders");
             Field field = shadersClass.getDeclaredField("isShadowPass");
             field.setAccessible(true);
+            
             return field.getBoolean(null);
         } catch (Exception e) {
             return false;
