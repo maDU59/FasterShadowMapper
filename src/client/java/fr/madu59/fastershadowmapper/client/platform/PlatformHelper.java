@@ -1,4 +1,4 @@
-package fr.madu59.fism.client.platform;
+package fr.madu59.fastershadowmapper.client.platform;
 
 import java.nio.file.Path;
 

@@ -1,4 +1,4 @@
-package fr.madu59.fism.client.mixin;
+package fr.madu59.fastershadowmapper.client.mixin;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.datafixers.util.Pair;
 
-import fr.madu59.fism.client.compat.ModCompat;
+import fr.madu59.fastershadowmapper.client.compat.ModCompat;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -23,7 +23,7 @@ import net.minecraft.world.level.block.entity.BannerPattern;
 @Mixin(BannerRenderer.class)
 public abstract class BannerRendererMixin {
     @Inject(method = "renderPatterns(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLjava/util/List;Z)V", at = @At("HEAD"), cancellable = true)
-    private static <S> void fism$cancelRenderPatterns(PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j, ModelPart modelPart, Material material, boolean bl, List<Pair<Holder<BannerPattern>, DyeColor>> list, boolean bl2, CallbackInfo ci) {
+    private static <S> void fastershadowmapper$cancelRenderPatterns(PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j, ModelPart modelPart, Material material, boolean bl, List<Pair<Holder<BannerPattern>, DyeColor>> list, boolean bl2, CallbackInfo ci) {
         if(ModCompat.isShadowPass()) {
             modelPart.render(poseStack, material.buffer(multiBufferSource, RenderType::entitySolid, bl2), i, j);
             ci.cancel();

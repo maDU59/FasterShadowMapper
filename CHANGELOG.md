@@ -1,3 +1,2 @@
 # What's new:
-- Bug fixes
-- Backported to forge 1.20.1
+- Fixed a crash with Beryl
