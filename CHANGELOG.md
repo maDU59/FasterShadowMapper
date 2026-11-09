@@ -1,2 +1,2 @@
 # What's new:
-- Fixed incorrect mixin target
+- Fixed a crash with Beryl

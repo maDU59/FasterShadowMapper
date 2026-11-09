@@ -1,18 +1,16 @@
-package fr.madu59.fism.platform;
+package fr.madu59.fastershadowmapper.client.platform;
 
 import java.nio.file.Path;
 
 import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.FMLPaths;
 
-
-
 public class PlatformHelper {
 
     public static String getPlatformName(){
         return "Neoforge";
     }
-    
+
     public static boolean isModLoaded(String modId){
         return FMLLoader.getLoadingModList().getModFileById(modId) != null;
     }

@@ -203,7 +203,7 @@ publishMods {
         server = false
     }
     modrinth {
-		displayName = "Faster Iris Shadow Mapper $project.mod_version"
+		displayName = "Faster Shadow Mapper $project.mod_version"
         projectId = project.modrinth_id
         accessToken = providers.environmentVariable("MODRINTH_TOKEN")
 

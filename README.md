@@ -1,12 +1,19 @@
-Faster Iris Shadow Mapping is a really lightweight mod that prevents unneeded things from rendering during the shadow pass.
+Faster Shadow Mapping is a really lightweight mod that prevents unneeded things from rendering during the shadow pass.
 
-**This project does not remplace Iris, both needs to be used at the same time for it to work**
+# Compatible shader mods:
+- **Iris** (built-in since 1.11.2+)
+- **Beryl**
+- **Oculus**
+- **Optifine**
 
 # How it works
 During the shadow pass, for opaque models, the color of the model won't have any visual change, a blue car and a red car both cast the same shadow, no matter their color.
 So what this mod does is it prevents things like the text on signs, the banner patterns, the enchantment glint etc from rendering during the shadow pass.
+It only improves performances when some of those are visibles.
 
 # Performance showcase
+Tested with Iris
+
 **Small base in a flat world (26.1.2 - 1.0.0)**
 <table>
   <caption>
@@ -37,7 +44,12 @@ So what this mod does is it prevents things like the text on signs, the banner p
 
 - +50% FPS on average
 - +1000% FPS on 0.05% low
+- The signs have text on them but on the other side
 
 # Modpacks
 
 Feel free to use this mod in your modpacks without asking for permission.
+
+# For developers
+
+If you are the developer of a shader mod, feel free to include this project's code in your mod, or to tell me about it so I can make this mod compatible with your's.

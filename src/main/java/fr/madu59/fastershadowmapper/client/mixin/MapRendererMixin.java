@@ -1,0 +1,26 @@
+package fr.madu59.fastershadowmapper.client.mixin;
+
+import fr.madu59.fastershadowmapper.client.compat.ModCompat;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import net.minecraft.client.renderer.entity.ItemFrameRenderer;
+
+@Mixin(ItemFrameRenderer.class)
+public abstract class MapRendererMixin {
+    @Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/MapItem;getSavedData(Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;"), cancellable = true, require = 0)
+    public <S> void fastershadowmapper$cancelMapRendering(CallbackInfo ci) {
+        if(ModCompat.isShadowPass()) {
+            ci.cancel();
+        }
+    }
+
+    @Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/MapItem;getSavedData(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;"), cancellable = true, require = 0)
+    public <S> void fastershadowmapper$cancelMapRenderingBis(CallbackInfo ci) {
+        if(ModCompat.isShadowPass()) {
+            ci.cancel();
+        }
+    }
+}
