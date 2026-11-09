@@ -44,6 +44,8 @@ dependencies {
 	modImplementation("maven.modrinth:iris:1.8.8+1.21.1-fabric")
 	modCompileOnly "com.logisticscraft:occlusionculling:0.0.8-SNAPSHOT"
 	
+	modCompileOnly("maven.modrinth:beryl:ctik2Mfd")
+	modCompileOnly("maven.modrinth:vulkanmod:0.6.7+1.21.1")
 }
 
 processResources {
@@ -122,7 +124,7 @@ publishMods {
         requires("fabric-api")
     }
     modrinth {
-		displayName = "Faster Iris Shadow Mapper $project.mod_version"
+		displayName = "Faster Shadow Mapper $project.mod_version"
         projectId = project.modrinth_id
         accessToken = providers.environmentVariable("MODRINTH_TOKEN")
 

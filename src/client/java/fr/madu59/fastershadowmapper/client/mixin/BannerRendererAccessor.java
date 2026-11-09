@@ -1,4 +1,4 @@
-package fr.madu59.fism.client.mixin;
+package fr.madu59.fastershadowmapper.client.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;
@@ -14,5 +14,5 @@ import net.minecraft.world.item.DyeColor;
 @Mixin(BannerRenderer.class)
 public interface BannerRendererAccessor {
     @Invoker("renderPatternLayer")
-    static <S> void fism$renderPatternLayerInvoke(PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j, ModelPart modelPart, Material material, DyeColor dyeColor){};
+    static <S> void fastershadowmapper$renderPatternLayerInvoke(PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j, ModelPart modelPart, Material material, DyeColor dyeColor){};
 }
