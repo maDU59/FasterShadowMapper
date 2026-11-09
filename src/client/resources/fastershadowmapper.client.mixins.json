@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "fr.madu59.fism.client.mixin",
+	"package": "fr.madu59.fastershadowmapper.client.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
 		"AbstractSignRendererMixin",
@@ -8,7 +8,7 @@
 		"BannerRendererMixin",
 		"MapRendererMixin",
 		"ItemStackMixin",
-		"compat.iris.ShadowRendererMixin"
+		"compat.beryl.ShadowMapMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
