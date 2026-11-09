@@ -45,7 +45,7 @@ dependencies {
 	modCompileOnly "com.logisticscraft:occlusionculling:0.0.8-SNAPSHOT"
 	
 	modCompileOnly("maven.modrinth:beryl:ctik2Mfd")
-	modCompileOnly("maven.modrinth:vulkanmod:7pYvUnJk")
+	modCompileOnly("maven.modrinth:vulkanmod:RAtVo03C")
 }
 
 processResources {
